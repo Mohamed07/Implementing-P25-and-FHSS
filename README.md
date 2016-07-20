@@ -19,3 +19,6 @@ Also you will find the Transmiiter and Reciever of the Frequency Hopping Spread 
 
 "ED_Hier.grc" : This GRC file is a hierarchical block of energy detection using fourier analysis.
 
+"framing_tx_rx.grc" : Replaces the vocoder with built framing to reduce the processing time. Before you run this file modify the path of the input and output files.
+
+"encoded_voice.txt" : This file is an encoded voice using AMBE kit.
