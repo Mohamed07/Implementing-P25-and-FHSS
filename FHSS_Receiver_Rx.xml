@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<block>
+  <name>Rx</name>
+  <key>FHSS_Receiver_Rx</key>
+  <category>FHSS_Receiver</category>
+  <import>import FHSS_Receiver</import>
+  <make>FHSS_Receiver.Rx($n_channels,$burst_length,$freq_delta,$base_freq,$seed,$rate)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Number of Channels</name>
+    <key>n_channels</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Burst Length</name>
+    <key>burst_length</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Delta Frequency</name>
+    <key>freq_delta</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Base Frequency</name>
+    <key>base_freq</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Seed</name>
+    <key>seed</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Sample_rate</name>
+    <key>rate</key>
+    <type>float</type>
+  </param>
+
+
+
+
+
+
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+
+  <sink>
+    <name>sync</name>
+    <type>float</type>
+  </sink >
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<block>
+  <name>Hopping Block</name>
+  <key>FHSS_hopper</key>
+  <category>FHSS</category>
+  <import>import FHSS</import>
+  <make>FHSS.hopper($n_bursts,$n_channels,$freq_delta,$base_freq,$dsp_tuning,$burst_length,$base_time,$hop_time,$rate,$verbose,$seed,$tx_gain)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Number of Bursts</name>
+    <key>n_bursts</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Burst Length</name>
+    <key>burst_length</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Seed</name>
+    <key>seed</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Number of Channels</name>
+    <key>n_channels</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Dsp Tuning</name>
+    <key>dsp_tuning</key>
+    <type>bool</type>
+  </param>
+  <param>
+    <name>Delta Frequency </name>
+    <key>freq_delta</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Center Freq</name>
+    <key>base_freq</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Gain (db)</name>
+    <key>tx_gain</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Sample Rate</name>
+    <key>rate</key>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Base Time</name>
+    <key>base_time</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Hop Time</name>
+    <key>hop_time</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Verbose</name>
+    <key>verbose</key>
+    <type>bool</type>
+  </param>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>
